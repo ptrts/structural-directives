@@ -1,20 +1,27 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-import { Hero, heroes } from './hero';
+import {Hero, heroes} from './hero';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+    selector: 'my-app',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  heroes = heroes;
-  hero = this.heroes[0];
 
-  condition = false;
-  logs: string[] = [];
-  showSad = true;
-  status = 'ready';
+    heroes = heroes;
 
-  trackById(index: number, hero: Hero): number { return hero.id; }
+    hero = this.heroes[0];
+
+    condition = false;
+
+    logs: string[] = [];
+
+    showSad = true;
+
+    status = 'ready';
+
+    trackById(index: number, hero: Hero): number {
+        return hero.id;
+    }
 }
